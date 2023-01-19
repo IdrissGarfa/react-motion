@@ -4,14 +4,19 @@ import { motion } from 'framer-motion';
 
 const containerVariants = {
   hidden: {
-    x: '100vw'
+    opacity: 0
   },
   visible: {
     opacity: 1,
-    x: 0,
     transition: {
-      type: 'spring',
-      delay: 0.5
+      delay: 1.5,
+      duration: 1.5
+    }
+  },
+  exit: {
+    x: '-100vw',
+    transition: {
+      ease: 'easeInOut'
     }
   }
 };
@@ -35,6 +40,7 @@ const Home = () => {
       variants={containerVariants}
       initial="hidden"
       animate="visible"
+      exit="exit"
     >
       <h2
       >
