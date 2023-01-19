@@ -1,16 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+
 const Home = () => {
   return (
     <motion.div className="home container"
-      animate={{ opacity: 0.8, marginTop: 200 }}
+      initial={{ opacity: 0}}
+      animate={{ opacity: 1}}
     >
-      <motion.h2 
-        animate={{ fontSize: '40px', color: '#ff2994', x: 100, y: -100}}
+      <h2 
       >
         Welcome to Pizza Joint
-      </motion.h2>
+      </h2>
       <Link to="/base">
         <motion.button 
           animate={{ scale: 1.3 }}
