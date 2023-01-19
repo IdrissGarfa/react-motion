@@ -30,7 +30,7 @@ function App() {
   return (
     <>
       <Header />
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence mode='wait'>
         <Routes location={location} key={location.key}>
           <Route path="/base" element={<Base addBase={addBase} pizza={pizza} />} />
             
